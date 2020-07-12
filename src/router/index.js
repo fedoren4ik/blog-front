@@ -14,8 +14,8 @@ export default new Router({
             component: Registration
         },
         {
-            path: '/login',
-            name: 'EventEdit',
+            path: '/',
+            name: 'Login',
             component: Login,
         },
         {
