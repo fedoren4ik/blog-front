@@ -1,11 +1,11 @@
 <template>
   <div id="app">
-    <div style="padding-bottom: 20px;">
-      <router-view></router-view>
-    </div>
+    <div class="container">
+     <router-view></router-view>
+    </div>  
     <div class="footer">
       © Powered by Fedorenchik
-    </div>
+  </div>  
   </div>
 </template>
 
@@ -21,13 +21,20 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
-  margin: 0;
   height: 100%;
+  min-height: 100%;
   width: 100%;
+  min-width: 100%;
+  overflow: hidden;
+}
+
+.container { 
+  padding: 0 10px;
+  margin: 0 auto;
 }
 
 .footer {
-  bottom: 0;
+  bottom: 20px;
   position: absolute;
   width: 100%;
   text-align: center;
