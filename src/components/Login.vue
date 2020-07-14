@@ -5,7 +5,7 @@
                 <div class="login-title">
                     Login
                 </div>
-                <form>
+                <form class="form-wrapper">
                     <div class="login-field">
                         <div class="name-field">
                             E-mail:
@@ -18,16 +18,18 @@
                         </div>
                         <input class="login-input" v-model="form.userPassword" type="password" name="password"/>
                     </div>
-                    <router-link to="/registration">
-                        <div class="to-registration">Registration</div>
-                    </router-link>
+                    <div class="login-field">
+                        <router-link to="/registration">
+                          <div class="to-registration">Registration</div>
+                        </router-link>
+                    </div>
                     <div class="login-button-wrapper">
                         <input class="login-button" type="submit" value="Login" @click="handleSubmit">
                     </div>
                 </form>
             </div>
         </div>
-    </div>    
+    </div>
 </template>
 
 <script type="text/ecmascript-6">
@@ -71,21 +73,28 @@
     font-size: 33px;
     margin-bottom: 10px;
 }
+
+.form-wrapper {
+    margin: 0 auto;
+    padding: 0 10px;
+}
 .login-field {
-    max-width: 270px;
+    max-width: 350px;
     margin: 15px auto;
-    padding: 0 89px;
+    padding: 0 10px;
 }
 
 .login-input {
-    margin-top: 5px;
     border: 1px lightblue solid;
     border-radius: 0.25rem;
     height: 35px;
     padding: 0 10px;
     font-size: 18px;
     color: #2c3e50;
-    max-width: 400px;
+    width: 100%;
+    max-width: inherit;
+    box-sizing: border-box;
+    margin-top: 5px;
 }
 
 .name-field {
@@ -98,8 +107,11 @@
     cursor: pointer;
     color: #2c3e50;
     text-decoration: none;
-    padding-right: 25px;
+    max-width: 400px;
+    width: 100%;
+    box-sizing: border-box;
 }
+
 .login-button-wrapper {
     margin-top: 10px;
 }
@@ -115,14 +127,9 @@
 /*media for login component */
 @media screen and (max-width: 450px) {
     .login-form {
-        margin-top: 100px;
+        margin: 50px 0;
         padding: 40px 10px;
     }
-    .login-field {
-    max-width: 270px;
-    margin: 15px auto;
-    padding: 0 30px;
-    }   
 }
 /*end of login media*/
 </style>
