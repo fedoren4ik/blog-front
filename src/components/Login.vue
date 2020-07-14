@@ -76,12 +76,10 @@
 
 .form-wrapper {
     margin: 0 auto;
-    padding: 0 10px;
 }
 .login-field {
     max-width: 350px;
     margin: 15px auto;
-    padding: 0 10px;
 }
 
 .login-input {
@@ -127,8 +125,10 @@
 /*media for login component */
 @media screen and (max-width: 450px) {
     .login-form {
-        margin: 50px 0;
-        padding: 40px 10px;
+        margin: 70px 0;
+    }
+    .login-form-wrapper {
+        padding-bottom: 50px;
     }
 }
 /*end of login media*/

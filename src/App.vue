@@ -2,10 +2,10 @@
   <div id="app">
     <div class="container">
      <router-view></router-view>
-    </div>  
+    </div>
     <div class="footer">
       © Powered by Fedorenchik
-  </div>  
+  </div>
   </div>
 </template>
 
@@ -22,13 +22,14 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
   height: 100%;
-  min-height: 100%;
+  min-height: 100vh;
   width: 100%;
   min-width: 100%;
   overflow: hidden;
+  position: relative;
 }
 
-.container { 
+.container {
   padding: 0 10px;
   margin: 0 auto;
 }
